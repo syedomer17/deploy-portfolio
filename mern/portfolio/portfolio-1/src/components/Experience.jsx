@@ -13,16 +13,6 @@ const experiences = [
     period: "2024 - Present",
     description: "Web Developer.",
   },
-  {
-    company: "Third Company",
-    period: "2020 - Present",
-    description: "Description of your experience in this company.",
-  },
-  {
-    company: "Fourth Company",
-    period: "2020 - Present",
-    description: "Description of your experience in this company.",
-  },
 ];
 
 const Experience = () => {
