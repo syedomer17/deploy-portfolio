@@ -1,10 +1,6 @@
 import React from "react";
-import {
-  FaGithubSquare,
-  FaInstagram,
-  FaFacebookSquare,
-  FaTwitterSquare,
-} from "react-icons/fa";
+import { FaGithubSquare, FaInstagram, FaFacebookSquare } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
   return (
@@ -42,7 +38,7 @@ const Footer = () => {
             href="https://x.com/SyedOmerAl20006"
             className="hover:text-blue-400 transition-transform duration-300 hover:scale-125 hover:-rotate-6"
           >
-            <FaTwitterSquare />
+            <FaXTwitter />
           </a>
         </div>
       </div>

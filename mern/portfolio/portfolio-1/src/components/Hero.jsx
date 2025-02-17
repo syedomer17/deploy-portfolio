@@ -8,15 +8,8 @@ import {
   AiOutlineInstagram,
   AiOutlineLinkedin,
   AiOutlineFacebook,
-  AiOutlineTwitter,
+  AiOutlineX,
 } from "react-icons/ai";
-import {
-  DiCss3,
-  DiHtml5,
-  DiJavascript1,
-  DiNodejsSmall,
-  DiReact,
-} from "react-icons/di";
 
 const Hero = () => {
   return (
@@ -75,21 +68,28 @@ const Hero = () => {
             transition={{ duration: 1, delay: 1.5 }}
             className="flex flex-row items-center gap-6 my-4 md:mb-0"
           >
+            {/* Fixed Button */}
             <motion.button
-              whileHover={{
-                scale: 1.05,
-                boxShadow: "0px 0px 10px rgba(147, 51, 234, 0.5)",
-              }}
-              className="z-10 cursor-pointer font-bold text-white px-6 py-3 bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl transition-all duration-300 hover:shadow-lg hover:from-blue-500 hover:to-purple-500"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
+              transition={{ duration: 0.3 }}
+              className="z-10 cursor-pointer font-bold text-white px-6 py-3 
+                bg-gradient-to-r from-purple-500 to-blue-500 rounded-xl 
+                transition-all duration-300 hover:from-blue-500 hover:to-purple-500 
+                hover:shadow-lg"
+              onClick={() => window.open("https://todo.syedomer.xyz", "_blank")}
             >
-              Download CV
+               Task Manager 
             </motion.button>
 
+            {/* Social Media Links */}
             <div className="flex gap-6 flex-row text-4xl md:text-6xl z-20">
               <motion.a
                 whileHover={{ scale: 1.2, color: "#8257e5" }}
                 href="https://github.com/syedomer17"
                 className="transition-all duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <AiOutlineGithub />
               </motion.a>
@@ -97,6 +97,8 @@ const Hero = () => {
                 whileHover={{ scale: 1.2, color: "#0077b5" }}
                 href="https://www.linkedin.com/in/syed-omer-ali-b73501324"
                 className="transition-all duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <AiOutlineLinkedin />
               </motion.a>
@@ -104,6 +106,8 @@ const Hero = () => {
                 whileHover={{ scale: 1.2, color: "#E1306C" }}
                 href="https://www.instagram.com/syedomer934"
                 className="transition-all duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <AiOutlineInstagram />
               </motion.a>
@@ -111,6 +115,8 @@ const Hero = () => {
                 whileHover={{ scale: 1.2, color: "#1877F2" }}
                 href="https://www.facebook.com/share/15dm4xpa4T/"
                 className="transition-all duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 <AiOutlineFacebook />
               </motion.a>
@@ -118,13 +124,16 @@ const Hero = () => {
                 whileHover={{ scale: 1.2, color: "#1DA1F2" }}
                 href="https://x.com/SyedOmerAl20006"
                 className="transition-all duration-300"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                <AiOutlineTwitter />
+                <AiOutlineX />
               </motion.a>
             </div>
           </motion.div>
         </motion.div>
 
+        {/* Profile Picture */}
         <motion.img
           src={profilepic}
           className="w-[300px] md:w-[450px] rounded-full shadow-lg"
@@ -135,23 +144,7 @@ const Hero = () => {
         />
       </div>
 
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, delay: 2 }}
-        className="flex flex-row text-7xl px-12 md:px-0 w-full justify-center items-center py-24"
-      >
-        <p className="text-gray-300 text-3xl font-semibold mr-6">
-          My Tech Stack
-        </p>
-        <DiHtml5 className="text-orange-600 mx-2 hover:scale-110 transition-all duration-300" />
-        <DiCss3 className="text-blue-600 mx-2 hover:scale-110 transition-all duration-300" />
-        <DiJavascript1 className="text-yellow-500 mx-2 hover:scale-110 transition-all duration-300" />
-        <DiReact className="text-blue-500 mx-2 hover:scale-110 transition-all duration-300" />
-        <DiNodejsSmall className="text-green-500 mx-2 hover:scale-110 transition-all duration-300" />
-      </motion.div>
-
+      {/* Background Effect */}
       <div className="absolute inset-0 hidden md:block">
         <ShinyEffect left={0} top={0} size={1400} />
       </div>
